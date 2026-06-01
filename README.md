@@ -5,24 +5,6 @@ Ein modulares, handgeführtes Kamera-System zur Videoaufzeichnung und Echtzeit-V
 ## 🏗️ System-Architektur
 Das System besteht aus zwei Haupt-Subsystemen: der autarken Stromversorgung und der aktiven Signalverarbeitung.
 
-```mermaid
-graph LR
-    subgraph Stromversorgung
-    Batt[12V Akku] --> Switch[Schalter am Griff]
-    Switch --> Dist[12V Verteiler/Schiene]
-    Dist --> Cam[Kamera]
-    Dist --> Mon[4.3 Zoll Monitor]
-    Dist --> Amp[Aktiver Video-Booster]
-    Dist --> Step[Step-Down Wandler 12V auf 5V]
-    Step --> DVR[Mini DVR]
-    end
-
-    subgraph Signalfluss
-    Cam -->|BNC| Amp
-    Amp -->|Out 1| DVR
-    Amp -->|Out 2| Mon
-    end
-
 ## 🛠️ Komponentenliste
 * **Kamera:** JVC TK 930E (CCTV)
 * **Aufnahme:** FPV Mini-DVR
